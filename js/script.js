@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     listItem.appendChild(taskSpan);
     listItem.appendChild(deleteBtn);
-    taskList.appendChild(listItem);
+    taskList.prepend(listItem);
   });
 
   addTaskBtn.addEventListener('click', addTask);
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       listItem.appendChild(taskSpan);
       listItem.appendChild(deleteBtn);
-      taskList.appendChild(listItem);
+      taskList.prepend(listItem);
 
       newTaskInput.value = '';
       newTaskInput.focus();

@@ -3,6 +3,8 @@ body {
     background-image: url("../img/test.jpg");
     justify-content: center;
     align-items: center;
+
+    min-height: 100vh;
     scroll-behavior: smooth;
 }
 
@@ -48,11 +50,14 @@ body {
     /* Center it horizontally */
     text-align: center;
     margin-top: 200px;
+
     margin-bottom: 50px;
 }
 
+
 h1 {
     margin-bottom: 20px;
+
 }
 
 
@@ -62,6 +67,7 @@ input[type="text"] {
     margin-bottom: 10px;
     border: 10px solid skyblue;
     border-radius: 40px;
+
 }
 
 button {
@@ -93,6 +99,7 @@ li {
     display: flex;
     font-family: comic sans MS;
     margin-bottom: 10px;
+    font-size: x-large;
     align-items: center;
     /* Add a 3D rotation effect */
     background-image: linear-gradient(to right, #f6ff00, #ffcc00);
@@ -136,9 +143,10 @@ li:hover {
     font-family: cursive;
     font-size: x-large;
     font-weight: bold;
-
+    bottom: 0;
+    position: fixed;
     text-align: center;
     padding: 1rem;
     width: 100%;
-    margin-top: auto;
+    margin-top: 0;
 }
