@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/test.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to right, #0069d9, #48c6ef);
+    /* Modern gradient */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.top-bar img {
+    height: 50px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.top-bar h1 {
+    font-size: 50px;
+    margin: 1px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
+    max-width: 400px;
+    margin: 0 auto;
+    /* Center it horizontally */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0783ff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    perspective: 1000px;
+    /* Add perspective to create a 3D effect */
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #00a8f6;
+    display: flex;
+    font-family: comic sans MS;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    transform: rotateX(10deg);
+    /* Add a 3D rotation effect */
+    background-image: linear-gradient(to right, #f6ff00, #ffcc00);
+    /* Add a gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow effect */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    transform: rotateX(20deg);
+    transform: rotateY(20deg);
+    /* Increase the rotation effect on hover */
+    box-shadow: 0 0 30px rgb(97, 226, 149);
+    /* Increase the shadow effect on hover */
+}
+
+.task {
+    flex-grow: 10;
+}
+
+.delete-btn {
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: green;
+}
+
+
+/* Responsive queries : */
+/* For screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .top-bar {
+        height: 50px;
+    }
+
+    .top-bar img {
+        height: 30px;
+        width: 40px;
+    }
+
+    .top-bar h1 {
+        font-size: 30px;
+    }
+}
+
+/* For screens smaller than 480px (mobiles) */
+@media (max-width: 480px) {
+    .container {
+        max-width: 200px;
+    }
+
+    .top-bar {
+        height: 40px;
+    }
+
+    .top-bar img {
+        height: 20px;
+        width: 30px;
+    }
+
+    .top-bar h1 {
+        font-size: 20px;
+    }
+}
