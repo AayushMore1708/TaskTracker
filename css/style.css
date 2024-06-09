@@ -1,20 +1,13 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-image: url("../img/test.jpg");
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    scroll-behavior: smooth;
 }
+
 .top-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,34 +18,37 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 1000;
 
 }
 
 .top-bar img {
-    height: 50px;
-    width: 60px;
+    height: 90px;
+    width: 90px;
     margin-right: 10px;
 }
 
 .top-bar h1 {
     font-size: 50px;
-    margin: 1px;
+    margin: 50px;
     font-weight: bold;
     color: #fff;
 
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    height: auto;
     width: 100%;
     background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
     max-width: 400px;
     margin: 0 auto;
     /* Center it horizontally */
     text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -64,8 +60,8 @@ input[type="text"] {
     width: calc(100% - 40px);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 10px solid skyblue;
+    border-radius: 40px;
 }
 
 button {
@@ -76,6 +72,7 @@ button {
     border-radius: 4px;
     margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 40px;
 }
 
 button:hover {
@@ -86,6 +83,7 @@ ul {
     list-style-type: none;
     padding: 0;
     perspective: 1000px;
+
     /* Add perspective to create a 3D effect */
 }
 
@@ -94,10 +92,8 @@ li {
     border-bottom: 1px solid #00a8f6;
     display: flex;
     font-family: comic sans MS;
-    justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
-    transform: rotateX(10deg);
     /* Add a 3D rotation effect */
     background-image: linear-gradient(to right, #f6ff00, #ffcc00);
     /* Add a gradient background */
@@ -110,8 +106,8 @@ li:last-child {
 }
 
 li:hover {
-    transform: rotateX(20deg);
-    transform: rotateY(20deg);
+    transform: rotateY(5deg);
+
     /* Increase the rotation effect on hover */
     box-shadow: 0 0 30px rgb(97, 226, 149);
     /* Increase the shadow effect on hover */
@@ -134,44 +130,15 @@ li:hover {
     background-color: green;
 }
 
+.footer {
+    background-color: rgba(97, 255, 168, 0.864);
+    color: black;
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bold;
 
-/* Responsive queries : */
-/* For screens smaller than 768px (tablets and mobiles) */
-@media (max-width: 768px) {
-    .container {
-        max-width: 300px;
-    }
-
-    .top-bar {
-        height: 50px;
-    }
-
-    .top-bar img {
-        height: 30px;
-        width: 40px;
-    }
-
-    .top-bar h1 {
-        font-size: 30px;
-    }
-}
-
-/* For screens smaller than 480px (mobiles) */
-@media (max-width: 480px) {
-    .container {
-        max-width: 200px;
-    }
-
-    .top-bar {
-        height: 40px;
-    }
-
-    .top-bar img {
-        height: 20px;
-        width: 30px;
-    }
-
-    .top-bar h1 {
-        font-size: 20px;
-    }
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto;
 }
