@@ -4,7 +4,15 @@
     padding: 0;
 }
 
-
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/test.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 .top-bar {
     position: absolute;
     top: 0;
