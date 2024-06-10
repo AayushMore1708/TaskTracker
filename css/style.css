@@ -47,7 +47,7 @@
      border-radius: 8px;
      background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
      max-width: 90%;
-     margin: 150px auto 50px auto;
+     margin: 150px auto 80px auto;
 
      text-align: center;
      box-sizing: border-box;
@@ -103,7 +103,7 @@
  }
 
  li:hover {
-     transform: rotateY(5deg);
+     transform: rotateY(-15deg);
      box-shadow: 0 0 30px rgb(97, 226, 149);
  }
 
