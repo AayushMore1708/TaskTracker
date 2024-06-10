@@ -10,34 +10,7 @@
      padding: 0;
  }
 
- #gradient {
-     background-image: linear-gradient(to right, rgb(255, 213, 0), #ff0, #0f0, #0ff, #00f, #0ff, rgb(78, 245, 175));
-     background-size: 100% 100%;
-     background-position: 0% 0%;
-     animation: gradient 1s infinite ease-in-out;
- }
 
- @keyframes gradient {
-     0% {
-         background-image: linear-gradient(to right, rgb(255, 120, 3), #ff0);
-     }
-
-     25% {
-         background-image: linear-gradient(to bottom, #0f0, #0ff);
-     }
-
-     50% {
-         background-image: linear-gradient(to right, #00f, #0ff);
-     }
-
-     75% {
-         background-image: linear-gradient(to BOTTOM, #0f0, rgb(0, 179, 255));
-     }
-
-     100% {
-         background-image: linear-gradient(to top, rgb(200, 106, 255), #ff0);
-     }
- }
 
  .top-bar {
      position: fixed;
@@ -74,7 +47,8 @@
      border-radius: 8px;
      background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
      max-width: 90%;
-     margin: 100px auto 50px auto;
+     margin: 150px auto 50px auto;
+
      text-align: center;
      box-sizing: border-box;
  }
@@ -118,7 +92,7 @@
      display: flex;
      font-family: Comic Sans MS;
      margin-bottom: 10px;
-     font-size: large;
+     font-size: larger;
      align-items: center;
      background-image: linear-gradient(to right, #f6ff00, #ffcc00);
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -141,6 +115,10 @@
      background-color: greenyellow;
      color: black;
      border: none;
+     text-align: center;
+     font-size: medium;
+     font-family: cursive;
+     font-weight: 600;
      padding: 5px 10px;
      border-radius: 50px;
      cursor: pointer;
@@ -175,7 +153,7 @@
 
      .container {
          padding: 20px;
-         margin: 80px auto 30px auto;
+         margin: 120px auto 30px auto;
      }
 
      input[type="text"] {
@@ -205,7 +183,8 @@
 
      .container {
          padding: 15px;
-         margin: 60px auto 20px auto;
+         margin: 120px auto 20px auto;
+         margin-top: 40px;
      }
 
      input[type="text"] {
