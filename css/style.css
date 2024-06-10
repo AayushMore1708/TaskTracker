@@ -1,233 +1,277 @@
- body {
-     font-family: Arial, sans-serif;
-     background-image: url("..//img/test.jpg");
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     min-height: 100vh;
-     scroll-behavior: smooth;
-     margin: 0;
-     padding: 0;
- }
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("..//img/test.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
 
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to right, #0069d9, #48c6ef);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    /* 2.5rem is equivalent to 40px */
+    z-index: 1000;
+    box-sizing: border-box;
+}
 
+.top-bar img {
+    height: 3.125rem;
+    /* 3.125rem is equivalent to 50px */
+    width: 3.125rem;
+    /* 3.125rem is equivalent to 50px */
+    margin-right: 1.25rem;
+    /* 1.25rem is equivalent to 20px */
+}
 
- .top-bar {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 70px;
-     background: linear-gradient(to right, #0069d9, #48c6ef);
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 10px 20px;
-     z-index: 1000;
-     box-sizing: border-box;
- }
+.top-bar h1 {
+    font-size: 1.5625rem;
+    /* 1.5625rem is equivalent to 25px */
+    margin: 0;
+    letter-spacing: 0.375rem;
+    /* 0.375rem is equivalent to 6px */
+    font-weight: bold;
+    color: #fff;
+}
 
- .top-bar img {
-     height: 50px;
-     width: 50px;
-     margin-right: 10px;
- }
+.container {
+    padding: 1.875rem;
+    /* 1.875rem is equivalent to 30px */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    /* 2rem is equivalent to 32px */
+    background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
+    max-width: 90%;
+    margin: 10.75rem auto 5rem auto;
+    /* 3.75rem is equivalent to 60px, 5rem is equivalent to 80px */
+    text-align: center;
+    box-sizing: border-box;
+}
 
- .top-bar h1 {
-     font-size: 2.5rem;
-     margin: 0;
-     letter-spacing: 3px;
-     font-weight: bold;
-     color: #fff;
- }
+h1 {
+    margin-bottom: 1.25rem;
+    /* 1.25rem is equivalent to 20px */
+}
 
- .container {
-     padding: 30px;
-     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-     border-radius: 8px;
-     background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
-     max-width: 90%;
-     margin: 150px auto 200px auto;
+input[type="text"] {
+    width: calc(100% - 2.5rem);
+    /* 2.5rem is equivalent to 40px */
+    padding: 0.625rem;
+    /* 0.625rem is equivalent to 10px */
+    margin-bottom: 0.625rem;
+    /* 0.625rem is equivalent to 10px */
+    border: 1px solid skyblue;
+    border-radius: 2rem;
+    /* 2rem is equivalent to 32px */
+    box-sizing: border-box;
+}
 
-     text-align: center;
-     box-sizing: border-box;
- }
+button {
+    padding: 0.625rem 1.25rem;
+    /* 0.625rem is equivalent to 10px, 1.25rem is equivalent to 20px */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    /* 2rem is equivalent to 32px */
+    margin-bottom: 1.25rem;
+    /* 1.25rem is equivalent to 20px */
+    cursor: pointer;
+}
 
- h1 {
-     margin-bottom: 20px;
- }
+button:hover {
+    background-color: #0783ff;
+}
 
- input[type="text"] {
-     width: calc(100% - 40px);
-     padding: 10px;
-     margin-bottom: 10px;
-     border: 1px solid skyblue;
-     border-radius: 40px;
-     box-sizing: border-box;
- }
+ul {
+    list-style-type: none;
+    padding: 0;
+    perspective: 1000px;
+}
 
- button {
-     padding: 10px 20px;
-     background-color: #007bff;
-     color: white;
-     border: none;
-     border-radius: 40px;
-     margin-bottom: 20px;
-     cursor: pointer;
- }
+li {
+    padding: 0.625rem;
+    /* 0.625rem is equivalent to 10px */
+    border-bottom: 1px solid #00a8f6;
+    display: flex;
+    font-family: Comic Sans MS;
+    margin-bottom: 0.625rem;
+    /* 0.625rem is equivalent to 10px */
+    font-size: larger;
+    align-items: center;
+    background-image: linear-gradient(to right, #f6ff00, #ffcc00);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
- button:hover {
-     background-color: #0783ff;
- }
+li:last-child {
+    border-bottom: none;
+}
 
- ul {
-     list-style-type: none;
-     padding: 0;
-     perspective: 1000px;
- }
+li:hover {
+    transform: rotateY(-15deg);
+    box-shadow: 0 0 30px rgb(97, 226, 149);
+}
 
- li {
-     padding: 10px;
-     border-bottom: 1px solid #00a8f6;
-     display: flex;
-     font-family: Comic Sans MS;
-     margin-bottom: 10px;
-     font-size: larger;
-     align-items: center;
-     background-image: linear-gradient(to right, #f6ff00, #ffcc00);
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
+.task {
+    flex-grow: 1;
+}
 
- li:last-child {
-     border-bottom: none;
- }
+.delete-btn {
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    text-align: center;
+    font-size: medium;
+    font-family: cursive;
+    font-weight: 600;
+    padding: 0.3125rem 0.625rem;
+    /* 0.3125rem is equivalent to 5px, 0.625rem is equivalent to 10px */
+    border-radius: 0.5rem;
+    /* 0.5rem is equivalent to 8px */
+    cursor: pointer;
+}
 
- li:hover {
-     transform: rotateY(-15deg);
-     box-shadow: 0 0 30px rgb(97, 226, 149);
- }
+.delete-btn:hover {
+    background-color: green;
+}
 
- .task {
-     flex-grow: 1;
- }
+.footer {
+    background-color: rgba(97, 255, 168, 0.864);
+    color: black;
+    font-family: cursive;
+    font-size: large;
+    font-weight: bold;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    padding: 0.625rem;
+    /* 0.625rem is equivalent to 10px */
+    width: 100%;
+}
 
- .delete-btn {
-     background-color: greenyellow;
-     color: black;
-     border: none;
-     text-align: center;
-     font-size: medium;
-     font-family: cursive;
-     font-weight: 600;
-     padding: 5px 10px;
-     border-radius: 50px;
-     cursor: pointer;
- }
+@media (max-width: 768px) {
+    .top-bar h1 {
+        font-size: 1.5rem;
+    }
 
- .delete-btn:hover {
-     background-color: green;
- }
+    .top-bar img {
+        height: 2.5rem;
+        /* 2.5rem is equivalent to 40px */
+        width: 2.5rem;
+        /* 2.5rem is equivalent to 40px */
+    }
 
- .footer {
-     background-color: rgba(97, 255, 168, 0.864);
-     color: black;
-     font-family: cursive;
-     font-size: large;
-     font-weight: bold;
-     bottom: 0;
-     position: fixed;
-     text-align: center;
-     padding: 1rem;
-     width: 100%;
- }
+    .container {
+        padding: 1rem;
+        /* 1rem is equivalent to 16px */
+        margin: 2.5rem auto 1rem auto;
+        /* 2.5rem is equivalent to 40px, 1rem is equivalent to 16px */
+    }
 
- @media (max-width: 768px) {
-     .top-bar h1 {
-         font-size: 2.2rem;
-     }
+    input[type="text"] {
+        padding: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+        margin-bottom: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+    }
 
-     .top-bar img {
-         height: 40px;
-         width: 40px;
-     }
+    button {
+        padding: 0.5rem 1rem;
+        /* 0.5rem is equivalent to 8px, 1rem is equivalent to 16px */
+    }
 
-     .container {
-         padding: 20px;
-         margin: 120px auto 30px auto;
-     }
+    li {
+        padding: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+        font-size: medium;
+    }
+}
 
-     input[type="text"] {
-         padding: 8px;
-         margin-bottom: 8px;
-     }
+@media (max-width: 1024px) {
+    .top-bar h1 {
+        font-size: 1.5rem;
+    }
 
-     button {
-         padding: 8px 16px;
-     }
+    .top-bar img {
+        height: 2.5rem;
+        /* 2.5rem is equivalent to 40px */
+        width: 2.5rem;
+        /* 2.5rem is equivalent to 40px */
+    }
 
-     li {
-         padding: 8px;
-         font-size: medium;
-     }
- }
+    .container {
+        padding: 1rem;
+        /* 1rem is equivalent to 16px */
+        margin: 3.5rem auto 1rem auto;
+        /* 3.5rem is equivalent to 56px, 1rem is equivalent to 16px */
+    }
 
- @media (max-width: 1024px) {
-     .top-bar h1 {
-         font-size: 2.2rem;
-     }
+    input[type="text"] {
+        padding: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+        margin-bottom: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+    }
 
-     .top-bar img {
-         height: 40px;
-         width: 10px;
-     }
+    button {
+        padding: 0.5rem 1rem;
+        /* 0.5rem is equivalent to 8px, 1rem is equivalent to 16px */
+    }
 
-     .container {
-         padding: 20px;
-         margin: 180px auto 30px auto;
-     }
+    li {
+        padding: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+        font-size: medium;
+    }
+}
 
-     input[type="text"] {
-         padding: 8px;
-         margin-bottom: 8px;
-     }
+@media (max-width: 480px) {
+    .top-bar h1 {
+        font-size: 1rem;
+    }
 
-     button {
-         padding: 8px 16px;
-     }
+    .top-bar img {
+        height: 2rem;
+        /* 2rem is equivalent to 32px */
+        width: 2rem;
+        /* 2rem is equivalent to 32px */
+    }
 
-     li {
-         padding: 8px;
-         font-size: medium;
-     }
- }
+    .container {
+        padding: 0.5rem;
+        /* 0.5rem is equivalent to 8px */
+        margin: 2rem auto 0.5rem auto;
+        /* 2rem is equivalent to 32px, 0.5rem is equivalent to 8px */
+    }
 
- @media (max-width: 480px) {
-     .top-bar h1 {
-         font-size: 1.5rem;
-     }
+    input[type="text"] {
+        padding: 0.25rem;
+        /* 0.25rem is equivalent to 4px */
+        margin-bottom: 0.25rem;
+        /* 0.25rem is equivalent to 4px */
+    }
 
-     .top-bar img {
-         height: 30px;
-         width: 30px;
-     }
+    button {
+        padding: 0.25rem 0.5rem;
+        /* 0.25rem is equivalent to 4px, 0.5rem is equivalent to 8px */
+    }
 
-     .container {
-         padding: 15px;
-         margin: 120px auto 20px auto;
-         margin-top: 40px;
-     }
-
-     input[type="text"] {
-         padding: 6px;
-         margin-bottom: 6px;
-     }
-
-     button {
-         padding: 6px 12px;
-     }
-
-     li {
-         padding: 6px;
-         font-size: small;
-     }
- }
+    li {
+        padding: 0.25rem;
+        /* 0.25rem is equivalent to 4px */
+        font-size: small;
+    }
+}
