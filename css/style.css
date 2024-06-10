@@ -7,7 +7,65 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+            .top-bar h1 {
+                font-size: 1.2rem;
+            }
 
+            .top-bar img {
+                height: 40px;
+                width: 40px;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 80px auto 30px auto;
+            }
+
+            input[type="text"] {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+
+            button {
+                padding: 8px 16px;
+            }
+
+            li {
+                padding: 8px;
+                font-size: medium;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-bar h1 {
+                font-size: 1rem;
+            }
+
+            .top-bar img {
+                height: 30px;
+                width: 30px;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 60px auto 20px auto;
+            }
+
+            input[type="text"] {
+                padding: 6px;
+                margin-bottom: 6px;
+            }
+
+            button {
+                padding: 6px 12px;
+            }
+
+            li {
+                padding: 6px;
+                font-size: small;
+            }
+        }
 .top-bar {
     position: fixed;
     top: 0;
