@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       taskSpan.className = 'task';
 
       const deleteBtn = document.createElement('button');
-      deleteBtn.textContent = 'Done';
+      deleteBtn.textContent = 'Done ✓';
       deleteBtn.className = 'delete-btn';
       deleteBtn.addEventListener('click', () => {
         taskList.removeChild(listItem);

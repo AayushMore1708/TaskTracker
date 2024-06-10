@@ -1,210 +1,224 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: url("../img/test.jpg");
-    justify-content: center;
-    align-items: center;
+ body {
+     font-family: Arial, sans-serif;
+     background-image: url("..//img/test.jpg");
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     scroll-behavior: smooth;
+     margin: 0;
+     padding: 0;
+ }
 
-    min-height: 100vh;
-    scroll-behavior: smooth;
-}
-@media (max-width: 768px) {
-            .top-bar h1 {
-                font-size: 1.2rem;
-            }
+ #gradient {
+     background-image: linear-gradient(to right, rgb(255, 213, 0), #ff0, #0f0, #0ff, #00f, #0ff, rgb(78, 245, 175));
+     background-size: 100% 100%;
+     background-position: 0% 0%;
+     animation: gradient 1s infinite ease-in-out;
+ }
 
-            .top-bar img {
-                height: 40px;
-                width: 40px;
-            }
+ @keyframes gradient {
+     0% {
+         background-image: linear-gradient(to right, rgb(255, 120, 3), #ff0);
+     }
 
-            .container {
-                padding: 20px;
-                margin: 80px auto 30px auto;
-            }
+     25% {
+         background-image: linear-gradient(to bottom, #0f0, #0ff);
+     }
 
-            input[type="text"] {
-                padding: 8px;
-                margin-bottom: 8px;
-            }
+     50% {
+         background-image: linear-gradient(to right, #00f, #0ff);
+     }
 
-            button {
-                padding: 8px 16px;
-            }
+     75% {
+         background-image: linear-gradient(to BOTTOM, #0f0, rgb(0, 179, 255));
+     }
 
-            li {
-                padding: 8px;
-                font-size: medium;
-            }
-        }
+     100% {
+         background-image: linear-gradient(to top, rgb(200, 106, 255), #ff0);
+     }
+ }
 
-        @media (max-width: 480px) {
-            .top-bar h1 {
-                font-size: 1rem;
-            }
+ .top-bar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 70px;
+     background: linear-gradient(to right, #0069d9, #48c6ef);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 20px;
+     z-index: 1000;
+     box-sizing: border-box;
+ }
 
-            .top-bar img {
-                height: 30px;
-                width: 30px;
-            }
+ .top-bar img {
+     height: 50px;
+     width: 50px;
+     margin-right: 10px;
+ }
 
-            .container {
-                padding: 15px;
-                margin: 60px auto 20px auto;
-            }
+ .top-bar h1 {
+     font-size: 2.5rem;
+     margin: 0;
+     letter-spacing: 3px;
+     font-weight: bold;
+     color: #fff;
+ }
 
-            input[type="text"] {
-                padding: 6px;
-                margin-bottom: 6px;
-            }
+ .container {
+     padding: 30px;
+     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+     background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
+     max-width: 90%;
+     margin: 100px auto 50px auto;
+     text-align: center;
+     box-sizing: border-box;
+ }
 
-            button {
-                padding: 6px 12px;
-            }
+ h1 {
+     margin-bottom: 20px;
+ }
 
-            li {
-                padding: 6px;
-                font-size: small;
-            }
-        }
-.top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: linear-gradient(to right, #0069d9, #48c6ef);
-    /* Modern gradient */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 1000;
+ input[type="text"] {
+     width: calc(100% - 40px);
+     padding: 10px;
+     margin-bottom: 10px;
+     border: 1px solid skyblue;
+     border-radius: 40px;
+     box-sizing: border-box;
+ }
 
-}
+ button {
+     padding: 10px 20px;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     border-radius: 40px;
+     margin-bottom: 20px;
+     cursor: pointer;
+ }
 
-.top-bar img {
-    height: 90px;
-    width: 90px;
-    margin-right: 10px;
-}
+ button:hover {
+     background-color: #0783ff;
+ }
 
-.top-bar h1 {
-    font-size: 50px;
-    margin: 50px;
-    font-weight: bold;
-    color: #fff;
+ ul {
+     list-style-type: none;
+     padding: 0;
+     perspective: 1000px;
+ }
 
-}
+ li {
+     padding: 10px;
+     border-bottom: 1px solid #00a8f6;
+     display: flex;
+     font-family: Comic Sans MS;
+     margin-bottom: 10px;
+     font-size: large;
+     align-items: center;
+     background-image: linear-gradient(to right, #f6ff00, #ffcc00);
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
 
-.container {
-    padding: 30px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    height: auto;
-    width: 100%;
-    background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
-    max-width: 400px;
-    margin: 0 auto;
-    /* Center it horizontally */
-    text-align: center;
-    margin-top: 200px;
+ li:last-child {
+     border-bottom: none;
+ }
 
-    margin-bottom: 50px;
-}
+ li:hover {
+     transform: rotateY(5deg);
+     box-shadow: 0 0 30px rgb(97, 226, 149);
+ }
 
+ .task {
+     flex-grow: 1;
+ }
 
-h1 {
-    margin-bottom: 20px;
+ .delete-btn {
+     background-color: greenyellow;
+     color: black;
+     border: none;
+     padding: 5px 10px;
+     border-radius: 50px;
+     cursor: pointer;
+ }
 
-}
+ .delete-btn:hover {
+     background-color: green;
+ }
 
+ .footer {
+     background-color: rgba(97, 255, 168, 0.864);
+     color: black;
+     font-family: cursive;
+     font-size: large;
+     font-weight: bold;
+     bottom: 0;
+     position: fixed;
+     text-align: center;
+     padding: 1rem;
+     width: 100%;
+ }
 
-input[type="text"] {
-    width: calc(100% - 40px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 10px solid skyblue;
-    border-radius: 40px;
+ @media (max-width: 768px) {
+     .top-bar h1 {
+         font-size: 2.2rem;
+     }
 
-}
+     .top-bar img {
+         height: 40px;
+         width: 40px;
+     }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    border-radius: 40px;
-}
+     .container {
+         padding: 20px;
+         margin: 80px auto 30px auto;
+     }
 
-button:hover {
-    background-color: #0783ff;
-}
+     input[type="text"] {
+         padding: 8px;
+         margin-bottom: 8px;
+     }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    perspective: 1000px;
+     button {
+         padding: 8px 16px;
+     }
 
-    /* Add perspective to create a 3D effect */
-}
+     li {
+         padding: 8px;
+         font-size: medium;
+     }
+ }
 
-li {
-    padding: 10px;
-    border-bottom: 1px solid #00a8f6;
-    display: flex;
-    font-family: comic sans MS;
-    margin-bottom: 10px;
-    font-size: x-large;
-    align-items: center;
-    /* Add a 3D rotation effect */
-    background-image: linear-gradient(to right, #f6ff00, #ffcc00);
-    /* Add a gradient background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow effect */
-}
+ @media (max-width: 480px) {
+     .top-bar h1 {
+         font-size: 1.5rem;
+     }
 
-li:last-child {
-    border-bottom: none;
-}
+     .top-bar img {
+         height: 30px;
+         width: 30px;
+     }
 
-li:hover {
-    transform: rotateY(5deg);
+     .container {
+         padding: 15px;
+         margin: 60px auto 20px auto;
+     }
 
-    /* Increase the rotation effect on hover */
-    box-shadow: 0 0 30px rgb(97, 226, 149);
-    /* Increase the shadow effect on hover */
-}
+     input[type="text"] {
+         padding: 6px;
+         margin-bottom: 6px;
+     }
 
-.task {
-    flex-grow: 10;
-}
+     button {
+         padding: 6px 12px;
+     }
 
-.delete-btn {
-    background-color: greenyellow;
-    color: black;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.delete-btn:hover {
-    background-color: green;
-}
-
-.footer {
-    background-color: rgba(97, 255, 168, 0.864);
-    color: black;
-    font-family: cursive;
-    font-size: x-large;
-    font-weight: bold;
-    bottom: 0;
-    position: fixed;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    margin-top: 0;
-}
+     li {
+         padding: 6px;
+         font-size: small;
+     }
+ }
