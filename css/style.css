@@ -47,7 +47,7 @@
      border-radius: 8px;
      background-image: linear-gradient(to bottom, #85FFBD, #FFFB7D);
      max-width: 90%;
-     margin: 150px auto 80px auto;
+     margin: 150px auto 200px auto;
 
      text-align: center;
      box-sizing: border-box;
@@ -154,6 +154,36 @@
      .container {
          padding: 20px;
          margin: 120px auto 30px auto;
+     }
+
+     input[type="text"] {
+         padding: 8px;
+         margin-bottom: 8px;
+     }
+
+     button {
+         padding: 8px 16px;
+     }
+
+     li {
+         padding: 8px;
+         font-size: medium;
+     }
+ }
+
+ @media (max-width: 1024px) {
+     .top-bar h1 {
+         font-size: 2.2rem;
+     }
+
+     .top-bar img {
+         height: 40px;
+         width: 10px;
+     }
+
+     .container {
+         padding: 20px;
+         margin: 180px auto 30px auto;
      }
 
      input[type="text"] {
