@@ -61,8 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
       newTaskInput.value = '';
       newTaskInput.focus();
     }
+    if (taskText == '') {
+      window.alert("Kindly Enter Some Task to be assigned : -");
+    }
   }
-
   function removeTaskFromStorage(taskText) {
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     const index = storedTasks.findIndex((task) => task.text === taskText);
